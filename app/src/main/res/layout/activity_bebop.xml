@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BebopActivity"
+    android:id="@+id/piloting_view">
+
+    <kr.ac.kmu.ncs.dronecontroller.view.BebopVideoView
+        android:id="@+id/video_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency"
+        android:id="@+id/btn_emergency"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:width="150dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take picture"
+        android:id="@+id/btn_take_picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:width="150dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_takeoff_or_land"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:width="150dp"/>
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="turn right"
+        android:id="@+id/btn_yaw_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"/>
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="left"
+        android:id="@+id/btn_roll_left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:width="50dp"/>
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="turn left"
+        android:id="@+id/btn_yaw_left"
+        android:layout_below="@+id/btn_gaz_up"
+        android:layout_toLeftOf="@+id/btn_gaz_up"
+        android:layout_toStartOf="@+id/btn_gaz_up"/>
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="right"
+        android:id="@+id/btn_roll_right"
+        android:width="20dp"
+        android:layout_above="@+id/btn_backward"
+        android:layout_toRightOf="@+id/btn_backward"
+        android:layout_toEndOf="@+id/btn_backward"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="up"
+        android:id="@+id/btn_gaz_up"
+        android:layout_above="@+id/btn_yaw_right"
+        android:layout_toLeftOf="@+id/btn_yaw_right"
+        android:layout_toStartOf="@+id/btn_yaw_right"
+        android:width="110dp"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="down"
+        android:id="@+id/btn_gaz_down"
+        android:width="110dp"
+        android:layout_below="@+id/btn_yaw_right"
+        android:layout_toRightOf="@+id/btn_yaw_left"
+        android:layout_toEndOf="@+id/btn_yaw_left"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="forward"
+        android:id="@+id/btn_forward"
+        android:layout_alignTop="@+id/btn_gaz_up"
+        android:layout_toRightOf="@+id/btn_roll_left"
+        android:layout_toEndOf="@+id/btn_roll_left"
+        android:width="110dp"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:id="@+id/btn_backward"
+        android:layout_below="@+id/btn_roll_left"
+        android:layout_toRightOf="@+id/btn_roll_left"
+        android:layout_toEndOf="@+id/btn_roll_left"
+        android:width="110dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        android:id="@+id/btn_download"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:width="150dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Battery: "
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="XXX%"
+        android:id="@+id/lb_battery"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="roll"
+        android:id="@+id/textView2"
+        android:width="50dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btn_roll_left"
+        android:layout_toEndOf="@+id/btn_roll_left"/>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="yaw"
+        android:id="@+id/textView3"
+        android:width="50dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/btn_gaz_down"
+        android:layout_alignEnd="@+id/btn_gaz_down"
+        android:gravity="center_horizontal"/>
+</RelativeLayout>
